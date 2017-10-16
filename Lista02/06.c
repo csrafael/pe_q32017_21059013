@@ -7,7 +7,7 @@ double delta (double a, double b, double c)
 	return (b*b - 4*a*c);
 }
 
-double _Complex bhaskara (double a, double b, double c)
+double bhaskara (double a, double b, double c)
 {
 	double  x1, x2, c1, c1i;
 
