@@ -91,28 +91,30 @@ void changeTemp (int in, int out, double num )
 
 double binToDec(double num)
 {
-    int resto, i =0; 
-    double d = 0;
-    while(n != 0) {
-        resto = n%10;
-        n /= 10;
-        d += resto*pow(2,i);
+ 	int resto; 
+    double decimal = 0, i=0;
+
+    while(num != 0) {
+        resto = num%10;
+        num = num/10;
+        decimal = decimal + (resto*pow(2,i));
         ++i;
     }
+    
     return decimal;
 }
 
-double decToBin(double n)
+double decToBin(double num)
 {
-	int resto, i = 0;
-	double b = 0;
+	int resto;
+	double binary = 0, i = 1;
 	while(n != 0) {
-        	resto = n%2;
-        	n /= 2;
-        	b += resto*i;
-        	i *= 10;
-    	}
-    	return b;
+        resto = num%2;
+        num = num/2;
+        binary= binary + (resto*i);
+        i = i*10;
+    }
+    return binary;
 }
 
 double changeBase (int in, int out, double num )
